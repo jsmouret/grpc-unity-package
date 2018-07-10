@@ -9,6 +9,8 @@ cd -
 
 # Copy Nuget Plugins Files
 
+cp packages/Google.Protobuf.3.6.0/lib/net45/Google.Protobuf.dll                   Plugins/Google.Protobuf/lib/net45/Google.Protobuf.dll
+cp packages/Google.Protobuf.3.6.0/lib/net45/Google.Protobuf.xml                   Plugins/Google.Protobuf/lib/net45/Google.Protobuf.xml
 cp packages/Grpc.Core.1.13.0/lib/net45/Grpc.Core.dll                              Plugins/Grpc.Core/lib/net45/Grpc.Core.dll
 cp packages/Grpc.Core.1.13.0/lib/net45/Grpc.Core.pdb                              Plugins/Grpc.Core/lib/net45/Grpc.Core.pdb
 cp packages/Grpc.Core.1.13.0/lib/net45/Grpc.Core.xml                              Plugins/Grpc.Core/lib/net45/Grpc.Core.xml
