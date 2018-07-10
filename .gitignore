@@ -1,0 +1,8 @@
+build/
+Plugins/**/*.bundle
+Plugins/**/*.dll
+Plugins/**/*.pdb
+Plugins/**/*.so
+Plugins/**/*.xml
+packages/*
+!packages/packages.config

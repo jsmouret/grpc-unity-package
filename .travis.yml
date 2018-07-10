@@ -1,0 +1,44 @@
+os: osx
+osx_image: xcode9.4
+
+install:
+  # CMake 3.7.2
+  - curl -O https://cmake.org/files/v3.7/cmake-3.7.2-Darwin-x86_64.dmg
+  - yes | hdiutil attach cmake-3.7.2-Darwin-x86_64.dmg
+  - export PATH=/Volumes/cmake-3.7.2-Darwin-x86_64/CMake.app/Contents/bin:$PATH
+
+  # Java
+  - brew tap homebrew/cask-versions
+  - brew cask install java8
+  - export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+
+  # Android SDK
+  - mkdir android-sdk
+  - cd android-sdk
+  - curl -O https://dl.google.com/android/repository/sdk-tools-darwin-4333796.zip
+  - unzip -q sdk-tools-darwin-4333796.zip
+  - export PATH=$PWD/tools/bin:$PATH
+  - echo -y | sdkmanager 'platform-tools'
+  - echo -y | sdkmanager 'build-tools;28.0.1'
+  - echo -y | sdkmanager 'platforms;android-28'
+  - cd -
+
+  # Android NDK
+  - curl -O https://dl.google.com/android/repository/android-ndk-r13b-darwin-x86_64.zip
+  - unzip -q android-ndk-r13b-darwin-x86_64.zip
+  - export ANDROID_NDK_PATH=$PWD/android-ndk-r13b
+
+  # Nuget
+  - brew install nuget
+
+script:
+  - ./build_android.sh
+  - ./make_package.sh
+
+deploy:
+  provider: releases
+  api_key:
+    secure: MRl/4cJlzK36RUurqJkt2OhzvXNCDt/B/bdj2b8J5Us9gVr/0BUP8wwOzGTSCUJP9sKV1FE2f+S/5Ne90QN2pdTvIdHXvr1jc7CMImUcvC5iLLkuHDeNFc2tR/xz9UvldzNnWQAAViiVdi/knZPNeguE5ms55yTxpSTg7LxQiAFRSECYcxtJRwSn6XpgqIXiQOu1k//Gihydk0D6jyrZfYjUy9vw1quC6lkBLoXFJcPlh1GqbLo1Y3butkXMYWaIFhARa5hhVQXYXsPTmsAUVz5ToFMRYKuis9AehocZ/8epBOa+ezspyPLSJ0Ep+HYn6+xn9xczbXzbzAneiz5UpgKiCz3hmFPxo4d3pAeSmQPKn/0gQs6hLsxryM+TkPwHWmuqH5cFyVh4CKVwsnHvUA6nRi2AEVd/4jWwQ4FENe/1ZSdECZL91OrrtmMftLwk5DeI/rW4cpc3aaaPVDbUozBpzZctUC8De6r3V161SFJSsLeiU2ceO8wWhY3Ph8NbMCwMVzPZHWxj0fulH9/gx3oGn/4V02/JBBPG0yiFykq8NnHB02BWD9ysUbQ/CJe8jGwvK14Y80RVs7Hw/nBBBAOJkcgR9ilM2QAF4pmXmFqBGgC/yUASeb3niBklovRAXwZPShufylqkjon3LwlNCFHY7WiFs7AXVUyHQ+V8+VU=
+  file: grpc-unity-package.zip
+  on:
+    tags: true
