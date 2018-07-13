@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿#if UNITY_EDITOR_OSX
+
+using System.IO;
 using UnityEngine;
 using UnityEditor;
 using UnityEditor.Callbacks;
@@ -25,3 +27,5 @@ public class BuildHelper
         }
     }
 }
+
+#endif
