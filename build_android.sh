@@ -1,6 +1,9 @@
 #!/bin/sh
 set -ex
 
+# Need CMake 3.7.2
+export PATH=${ANDROID_CMAKE_PATH}:${PATH}
+
 mkdir build.android
 cd build.android
 

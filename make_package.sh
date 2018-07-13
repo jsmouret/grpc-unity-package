@@ -26,6 +26,7 @@ cp packages/System.Interactive.Async.3.1.1/lib/net45/System.Interactive.Async.xm
 # Copy Custom Plugins Files
 
 cp build.android/libgrpc_csharp_ext.so Plugins/Grpc.Core/runtimes/android/armv7/libgrpc_csharp_ext.so
+cp build.ios/libgrpc_csharp_ext.a Plugins/Grpc.Core/runtimes/ios/libgrpc_csharp_ext.a
 
 # Zipping
 

@@ -17,8 +17,7 @@ Just unzip it in your Assets folder.
 gRPC 1.13.0
 
 * Windows / Linux / OSX are extracted straight from the official Nuget package
-* Android is build with Travis
-* iOS TBD
+* Android and iOS are built using Travis
 
 ## Help wanted!
 

@@ -1,4 +1,5 @@
-build/
+build.*/
+Plugins/**/*.a
 Plugins/**/*.bundle
 Plugins/**/*.dll
 Plugins/**/*.pdb

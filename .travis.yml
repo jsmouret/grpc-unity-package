@@ -6,7 +6,7 @@ install:
   # CMake 3.7.2
   - curl -O https://cmake.org/files/v3.7/cmake-3.7.2-Darwin-x86_64.dmg
   - yes | hdiutil attach cmake-3.7.2-Darwin-x86_64.dmg
-  - export PATH=/Volumes/cmake-3.7.2-Darwin-x86_64/CMake.app/Contents/bin:$PATH
+  - export ANDROID_CMAKE_PATH=/Volumes/cmake-3.7.2-Darwin-x86_64/CMake.app/Contents/bin
 
   # Android NDK
   - curl -O https://dl.google.com/android/repository/android-ndk-r13b-darwin-x86_64.zip
@@ -15,6 +15,7 @@ install:
 
 script:
   - ./build_android.sh
+  - ./build_ios.sh
   - ./make_package.sh
 
 deploy:
