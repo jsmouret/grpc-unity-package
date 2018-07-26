@@ -20,8 +20,8 @@ cp packages/Grpc.Core.1.13.1/runtimes/osx/native/libgrpc_csharp_ext.x86.dylib   
 cp packages/Grpc.Core.1.13.1/runtimes/osx/native/libgrpc_csharp_ext.x64.dylib     Plugins/Grpc.Core/runtimes/osx/x64/grpc_csharp_ext.bundle
 cp packages/Grpc.Core.1.13.1/runtimes/win/native/grpc_csharp_ext.x86.dll          Plugins/Grpc.Core/runtimes/win/x86/grpc_csharp_ext.dll
 cp packages/Grpc.Core.1.13.1/runtimes/win/native/grpc_csharp_ext.x64.dll          Plugins/Grpc.Core/runtimes/win/x64/grpc_csharp_ext.dll
-cp packages/System.Interactive.Async.3.2.0/lib/net45/System.Interactive.Async.dll Plugins/System.Interactive.Async/lib/net45/System.Interactive.Async.dll
-cp packages/System.Interactive.Async.3.2.0/lib/net45/System.Interactive.Async.xml Plugins/System.Interactive.Async/lib/net45/System.Interactive.Async.xml
+cp packages/System.Interactive.Async.3.1.1/lib/net45/System.Interactive.Async.dll Plugins/System.Interactive.Async/lib/net45/System.Interactive.Async.dll
+cp packages/System.Interactive.Async.3.1.1/lib/net45/System.Interactive.Async.xml Plugins/System.Interactive.Async/lib/net45/System.Interactive.Async.xml
 
 # Copy Custom Plugins Files
 
