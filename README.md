@@ -9,15 +9,21 @@ Just a bunch of scripts and a travis config to build a nice package to support g
 
 It aims to be as vanilla as possible.
 
-Check out the [releases](https://github.com/jsmouret/grpc-unity-package/releases) to download the latest version.
-Just unzip it in your Assets folder.
-
 ## What's supported?
 
 gRPC 1.13.0
 
 * Windows / Linux / OSX are extracted straight from the official Nuget package
 * Android and iOS are built using Travis
+
+## How to run the example?
+
+* Clone this repository without submodules
+* Download the latest zip from [releases](https://github.com/jsmouret/grpc-unity-package/releases)
+* Unzip it in `example/UnityGrpcClient/Assets`
+* Open `example/UnityGrpcClient` in Unity
+* Run the SampleScene
+* Profit!
 
 ## Help wanted!
 
