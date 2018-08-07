@@ -19,6 +19,7 @@ gRPC 1.13.0
 ## How to run the example?
 
 * Clone this repository without submodules
+* If creating a fresh project, ensure .NET 4.x is enabled
 * Download the latest zip from [releases](https://github.com/jsmouret/grpc-unity-package/releases)
 * Unzip it in `example/UnityGrpcClient/Assets`
 * Open `example/UnityGrpcClient` in Unity
