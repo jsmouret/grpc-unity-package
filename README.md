@@ -2,6 +2,14 @@
 
 gRPC Unity Package
 
+# Update!
+
+gRPC now has an official yet experimental package for Unity.
+* Head over to https://packages.grpc.io/
+* Pick the last link in the Build ID column
+* Look for grpc_unity_package.x.y.z-dev.zip in the C# section
+* Unzip into your Assets folder
+* Profit!
 
 ## What is it?
 
