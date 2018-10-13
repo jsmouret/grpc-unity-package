@@ -2,6 +2,7 @@
 
 gRPC Unity Package
 
+---
 # Update!
 
 gRPC now has an official yet experimental package for Unity.
@@ -11,6 +12,7 @@ gRPC now has an official yet experimental package for Unity.
 * Unzip into your Assets folder
 * Profit!
 
+---
 ## What is it?
 
 Just a bunch of scripts and a travis config to build a nice package to support gRPC in Unity Engine.
